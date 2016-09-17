@@ -26,5 +26,5 @@ RUN source ${TOOLCHAIN} && ./configure --prefix=${INSTALL_ROOT}/slurm-${SLURM_VE
 RUN rm -rf ${BUILD_DIR} && rm -rf /root/rpmbuild
 
 ADD ./conf /opt/conf
-ADD ./scripts/startslurm.sh /opt/slurm/startslurm.sh
 RUN ln -sf /opt/slurm-${SLURM_VERSION} /opt/slurm
+ADD ./scripts/startslurm.sh /opt/slurm/startslurm.sh
