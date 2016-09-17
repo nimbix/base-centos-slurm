@@ -9,11 +9,11 @@ NODES=
 
 # Write the slurm.conf file
 for i in `cat /etc/JARVICE/nodes`; do
-    if [ -z $HOSTS ]; then
+    if [ -z $NODES ]; then
         NODES="$i"
         SUBMITNODE="$i"
     else
-        NODES="$HOSTS,$i"
+        NODES="$NODES,$i"
     fi
 done
 
